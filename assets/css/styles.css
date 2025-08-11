@@ -1,0 +1,232 @@
+/* Smooth scrolling & aesthetics */
+html {
+  scroll-behavior: smooth;
+}
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+}
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.25) 40%,
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 4;
+}
+.brand-gradient {
+  background-image: linear-gradient(135deg, #3b82f6, #06b6d4, #22c55e);
+}
+.animated-underline {
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+  background-image: linear-gradient(currentColor, currentColor);
+}
+.animated-underline:hover {
+  background-size: 100% 2px;
+}
+
+/* Floating logos */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Typewriter (code-style) */
+.typing {
+  font-variant-ligatures: none;
+  white-space: nowrap;
+  border-right: 2px solid #3b82f6;
+  animation: caret 0.8s step-end infinite;
+}
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Scroll hint + focus + tilt */
+.scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  opacity: 0.9;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+.scroll-hint .dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: #06b6d4;
+  animation: pulse 1.6s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(3px);
+  }
+}
+:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+.card-tilt {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+.card-tilt:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Hero canvas background */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 3;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .hero-canvas {
+    display: none;
+  }
+}
+
+/* Offset anchors for the fixed header */
+section {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Keyboard focus for swiper arrows */
+.swiper-button-prev:focus-visible,
+.swiper-button-next:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Accent rows (left gradient bar, no card boxiness) */
+.accent-row {
+  position: relative;
+}
+.accent-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  width: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #3b82f6, #06b6d4, #22c55e);
+  opacity: 0.9;
+}
+
+/* Vertical timeline */
+.timeline {
+  position: relative;
+  margin-left: 0.25rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(56, 189, 248, 0.6),
+    rgba(34, 197, 94, 0.6)
+  );
+}
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  top: 0.6rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #06b6d4, #22c55e);
+  box-shadow: 0 0 0 4px rgba(2, 6, 23, 0.8);
+}
+
+/* Horizontal stepper */
+.stepper {
+  position: relative;
+}
+.stepper-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1.5rem;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0.3),
+    rgba(56, 189, 248, 0.5),
+    rgba(34, 197, 94, 0.4)
+  );
+}
+.step {
+  position: relative;
+}
+.step .badge {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(135deg, #3b82f6, #06b6d4, #22c55e);
+  font-weight: 700;
+}
+
+/* Readability over photos */
+.text-shadow-lg {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65), 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.text-shadow-sm {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
+}
+
+/* Hero slide delayed text reveal (all slides) */
+.hero-text {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.hero-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}

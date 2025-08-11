@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New World Programming — Software Development Studio</title>
+    <meta
+      name="description"
+      content="New World Programming is a UK-based senior team building reliable websites, web & mobile apps, APIs, and AI systems fast. Fixed-scope MVPs, clean code, clear communication."
+    />
+    <meta
+      name="keywords"
+      content="software development, web apps, mobile apps, API, AI, business intelligence, DevOps, MVP, startup"
+    />
+
+    <!-- Preconnect for faster fetches -->
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdn.simpleicons.org" />
+    <!-- Favicon (inline SVG) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306b6d4'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-size='28' fill='white'%3ENW%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="New World Programming — Software Development Studio"
+    />
+    <meta
+      property="og:description"
+      content="Websites, web & mobile apps, APIs, and AI systems — shipped fast with a UK-based senior team."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&h=900&auto=format&fit=crop"
+    />
+    <meta property="og:url" content="https://nwprogramming.com" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="New World Programming — Software Development Studio"
+    />
+    <meta
+      name="twitter:description"
+      content="Websites, web & mobile apps, APIs, and AI systems — shipped fast with a UK-based senior team."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&h=900&auto=format&fit=crop"
+    />
+    <link rel="canonical" href="https://nwprogramming.com/" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper (hero slider) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@10/swiper-bundle.min.css"
+    />
+    <script
+      defer
+      src="https://unpkg.com/swiper@10/swiper-bundle.min.js"
+    ></script>
+
+    <!-- AOS (scroll animations) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <!-- Header -->
+    <header
+      class="fixed inset-x-0 top-0 z-50 bg-slate-950/70 border-b border-slate-800/60 glass"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="flex items-center gap-2 group">
+            <span class="inline-flex h-8 w-8 rounded-xl brand-gradient"></span>
+            <span class="font-semibold tracking-tight"
+              >New World Programming</span
+            >
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#services" class="animated-underline">Services</a>
+            <a href="#why-us" class="animated-underline">Why us</a>
+            <a href="#expertise" class="animated-underline">Expertise</a>
+            <a href="#stories" class="animated-underline">Stories</a>
+            <a href="#process" class="animated-underline">Process</a>
+            <a href="#guarantees" class="animated-underline">Guarantees</a>
+            <a href="#security" class="animated-underline">Security</a>
+            <a href="#about" class="animated-underline">About</a>
+            <a href="#team" class="animated-underline">Team</a>
+            <a href="#faq" class="animated-underline">FAQ</a>
+            <a href="#handoff" class="animated-underline">Next steps</a>
+            <a
+              href="#contact"
+              class="px-3 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-soft"
+              >Get a Quote</a
+            >
+          </nav>
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-800"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t border-slate-800/60"
+      >
+        <div class="px-4 py-3 space-y-2 bg-slate-900/80">
+          <a href="#services" class="block">Services</a>
+          <a href="#why-us" class="block">Why us</a>
+          <a href="#expertise" class="block">Expertise</a>
+          <a href="#stories" class="block">Stories</a>
+          <a href="#process" class="block">Process</a>
+          <a href="#guarantees" class="block">Guarantees</a>
+          <a href="#security" class="block">Security</a>
+          <a href="#handoff" class="block">Next steps</a>
+          <a href="#about" class="block">About</a>
+          <a href="#team" class="block">Team</a>
+          <a href="#faq" class="block">FAQ</a>
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500"
+            >Get a Quote</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section id="home" class="relative pt-16">
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+      <div class="swiper hero-swiper h-[85vh]">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide relative">
+            <img
+              src="assets/images/slider/1.jpg"
+              alt="New World Programming — hero"
+              class="absolute inset-0 w-full h-full object-cover"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+            />
+            <div class="hero-overlay absolute inset-0"></div>
+            <div
+              class="relative z-10 h-full max-w-7xl mx-auto px-6 flex items-center"
+            >
+              <div class="max-w-2xl hero-text">
+                <span
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs border border-white/20 mb-4"
+                  >New studio • Senior team</span
+                >
+                <h1
+                  class="text-4xl sm:text-5xl font-extrabold leading-tight text-shadow-lg"
+                >
+                  Launch your MVP in
+                  <span class="text-cyan-400">4–6 weeks</span>
+                </h1>
+                <p class="mt-4 text-slate-200/90 text-lg text-shadow-sm">
+                  Small, senior team. Clear scope. Fixed price. We design,
+                  build, and ship websites, web & mobile apps, APIs, and AI
+                  systems.
+                </p>
+                <div class="mt-3">
+                  <span
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/10 border border-white/20 font-mono text-base"
+                  >
+                    <span class="opacity-70">we build</span>
+                    <span class="sr-only"
+                      >MVPs, APIs, SaaS dashboards, Mobile apps</span
+                    >
+                    <span
+                      class="typing"
+                      aria-hidden="true"
+                      data-typewriter='["MVPs","APIs","SaaS dashboards","Mobile apps"]'
+                    ></span>
+                  </span>
+                </div>
+                <div class="mt-2">
+                  <span
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/10 border border-white/20 font-mono text-sm"
+                    >Computer Programming made simple</span
+                  >
+                </div>
+                <div class="mt-6 flex flex-wrap gap-3">
+                  <a
+                    href="#contact"
+                    class="px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-soft"
+                    >Get a Quote</a
+                  >
+                  <a
+                    href="#process"
+                    class="px-5 py-3 rounded-xl border border-white/30 hover:bg-white/10"
+                    >See Our Process</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide relative">
+            <img
+              src="assets/images/slider/2.jpg"
+              alt="From idea to production"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="hero-overlay absolute inset-0"></div>
+            <div
+              class="relative z-10 h-full max-w-7xl mx-auto px-6 flex items-center"
+            >
+              <div
+                class="max-w-2xl hero-text"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h2
+                  class="text-4xl sm:text-5xl font-extrabold leading-tight text-shadow-lg"
+                >
+                  From idea to production
+                </h2>
+                <p class="mt-4 text-slate-200/90 text-lg text-shadow-sm">
+                  Product design, development, testing, deployment, and ongoing
+                  support—handled end-to-end.
+                </p>
+                <div class="mt-6 flex gap-3">
+                  <a
+                    href="#services"
+                    class="px-5 py-3 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20"
+                    >What we do</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide relative">
+            <img
+              src="assets/images/slider/3.jpg"
+              alt="Benjamin Bahrami"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="hero-overlay absolute inset-0"></div>
+            <div
+              class="relative z-10 h-full max-w-7xl mx-auto px-6 flex items-center"
+            >
+              <div
+                class="max-w-2xl hero-text"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div>
+                  <h2
+                    class="text-3xl sm:text-5xl font-extrabold leading-tight text-shadow-lg"
+                  >
+                    Benjamin Bahrami
+                  </h2>
+                  <p class="mt-2 text-slate-200/90 text-lg text-shadow-sm">
+                    General Manager — MSc, MEng, BEE
+                  </p>
+                </div>
+                <p class="mt-4 text-slate-200/90 text-shadow-sm">
+                  Founder & General Manager of New World Programming. Ensures
+                  projects are scoped clearly, shipped on time, and handed over
+                  cleanly.
+                </p>
+                <ul
+                  class="mt-3 text-slate-200/90 text-sm sm:text-base space-y-1"
+                >
+                  <li>• Business & technical leadership</li>
+                  <li>• Client relations & delivery</li>
+                  <li>• Quality & process oversight</li>
+                </ul>
+                <div class="mt-6 flex gap-3">
+                  <a
+                    href="#contact"
+                    class="px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-soft"
+                    >Book a Call</a
+                  >
+                  <a
+                    href="#"
+                    class="px-5 py-3 rounded-xl border border-white/30 hover:bg-white/10"
+                    >LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slider controls -->
+        <div
+          class="absolute inset-x-0 bottom-4 z-20 flex items-center justify-center gap-3"
+        >
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="hidden md:block swiper-button-prev !text-white"></div>
+        <div class="hidden md:block swiper-button-next !text-white"></div>
+        <a href="#services" class="scroll-hint"
+          ><span class="dot"></span> Scroll</a
+        >
+      </div>
+    </section>
+
+    <!-- Trust / Tech Bar -->
+    <section class="py-10 bg-slate-900 border-y border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-center text-sm text-slate-400 mb-6">
+          Proudly building with
+        </p>
+        <div class="flex justify-center mb-6">
+          <span
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/5 border border-white/10 font-mono text-sm"
+          >
+            <span class="opacity-70">$</span>
+            <span class="sr-only"
+              >npm create newworld@latest, pnpm dlx newworld init, bunx create
+              newworld</span
+            >
+            <span
+              class="typing"
+              aria-hidden="true"
+              data-typewriter='["npm create newworld@latest","pnpm dlx newworld init","bunx create newworld"]'
+            ></span>
+          </span>
+        </div>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6 opacity-80"
+        >
+          <div class="flex items-center justify-center" data-aos="zoom-in">
+            <img
+              src="https://cdn.simpleicons.org/react/61dafb"
+              alt="React"
+              class="h-8 floating"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+          >
+            <img
+              src="https://cdn.simpleicons.org/vue.js/41b883"
+              alt="Vue"
+              class="h-8 floating"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://cdn.simpleicons.org/node.js/68a063"
+              alt="Node.js"
+              class="h-8 floating"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          >
+            <img
+              src="https://cdn.simpleicons.org/dotnet/512BD4"
+              alt=".NET"
+              class="h-8 floating"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://cdn.simpleicons.org/docker/2496ED"
+              alt="Docker"
+              class="h-8 floating"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center"
+            data-aos="zoom-in"
+            data-aos-delay="250"
+          >
+            <img
+              src="https://cdn.simpleicons.org/amazonaws/FF9900"
+              alt="AWS"
+              class="h-8 floating"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">What we do</h2>
+          <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
+            End-to-end product development with senior engineers only. We keep
+            scope tight, ship fast, and leave you with maintainable code.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="p-6 rounded-2xl border border-slate-800 glass card-tilt"
+            data-aos="fade-up"
+          >
+            <h3 class="text-xl font-semibold">Web & Mobile Apps</h3>
+            <p class="mt-2 text-slate-300">
+              React / Vue, Node.js or .NET backends, and modern CI/CD.
+              Pixel-perfect UI and robust APIs.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-2xl border border-slate-800 glass card-tilt"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3 class="text-xl font-semibold">APIs & Integrations</h3>
+            <p class="mt-2 text-slate-300">
+              Clean REST/GraphQL APIs, payment gateways, CRM/ERP, and
+              third-party services—secure by design.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-2xl border border-slate-800 glass card-tilt"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h3 class="text-xl font-semibold">Cloud & DevOps</h3>
+            <p class="mt-2 text-slate-300">
+              Dockerized workloads, automated tests, observability, and
+              one-click deploys across cloud providers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section
+      id="why-us"
+      class="py-20 bg-slate-900/60 border-y border-slate-800/60"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">Why choose us</h2>
+          <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
+            Clear scope, senior-only execution, and fast delivery—no surprises.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div
+            class="accent-row p-5 rounded-xl hover:bg-white/5 transition"
+            data-aos="fade-up"
+          >
+            <div class="flex items-start gap-4">
+              <span
+                class="inline-flex h-10 w-10 rounded-xl brand-gradient items-center justify-center"
+                >🏷️</span
+              >
+              <div>
+                <h3 class="text-lg font-semibold">Fixed scope & price</h3>
+                <p class="mt-1 text-slate-300">
+                  We agree the scope up front and stick to it—transparent
+                  milestones and deliverables.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accent-row p-5 rounded-xl hover:bg-white/5 transition"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            <div class="flex items-start gap-4">
+              <span
+                class="inline-flex h-10 w-10 rounded-xl brand-gradient items-center justify-center"
+                >🧑‍💻</span
+              >
+              <div>
+                <h3 class="text-lg font-semibold">Senior-only team</h3>
+                <p class="mt-1 text-slate-300">
+                  Hands-on engineers with real product experience—no hand-offs
+                  to juniors.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accent-row p-5 rounded-xl hover:bg-white/5 transition"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-start gap-4">
+              <span
+                class="inline-flex h-10 w-10 rounded-xl brand-gradient items-center justify-center"
+                >🎥</span
+              >
+              <div>
+                <h3 class="text-lg font-semibold">Weekly demos</h3>
+                <p class="mt-1 text-slate-300">
+                  Frequent checkpoints keep scope tight and ensure you always
+                  know what’s shipping.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accent-row p-5 rounded-xl hover:bg-white/5 transition"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div class="flex items-start gap-4">
+              <span
+                class="inline-flex h-10 w-10 rounded-xl brand-gradient items-center justify-center"
+                >📦</span
+              >
+              <div>
+                <h3 class="text-lg font-semibold">Clean handoff</h3>
+                <p class="mt-1 text-slate-300">
+                  Documentation, runbooks, and a maintainable codebase that your
+                  team can own.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accent-row p-5 rounded-xl hover:bg-white/5 transition"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex items-start gap-4">
+              <span
+                class="inline-flex h-10 w-10 rounded-xl brand-gradient items-center justify-center"
+                >🛡️</span
+              >
+              <div>
+                <h3 class="text-lg font-semibold">30‑day warranty</h3>
+                <p class="mt-1 text-slate-300">
+                  If something in scope isn’t right post‑launch, we fix it at
+                  our cost within 30 days.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accent-row p-5 rounded-xl hover:bg-white/5 transition"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <div class="flex items-start gap-4">
+              <span
+                class="inline-flex h-10 w-10 rounded-xl brand-gradient items-center justify-center"
+                >✍️</span
+              >
+              <div>
+                <h3 class="text-lg font-semibold">You own the IP</h3>
+                <p class="mt-1 text-slate-300">
+                  We’re happy to sign an NDA. All IP and deliverables are yours
+                  upon payment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise (from client brief) -->
+    <section
+      id="expertise"
+      class="py-20 bg-slate-900/60 border-y border-slate-800/60"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">Expertise</h2>
+          <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
+            Focused capabilities aligned with your brief.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="p-6 rounded-2xl border border-slate-800 glass card-tilt">
+            <h3 class="text-xl font-semibold">Artificial Intelligence</h3>
+            <p class="mt-2 text-slate-300">
+              LLMs, chatbots, recommendations, data pipelines, and model
+              integration.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-800 glass card-tilt">
+            <h3 class="text-xl font-semibold">Business Intelligence</h3>
+            <p class="mt-2 text-slate-300">
+              Dashboards, ETL, warehousing, KPI reporting, and decision support.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-800 glass card-tilt">
+            <h3 class="text-xl font-semibold">Python</h3>
+            <p class="mt-2 text-slate-300">
+              APIs, data processing, automation, and ML tooling.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-800 glass card-tilt">
+            <h3 class="text-xl font-semibold">Java</h3>
+            <p class="mt-2 text-slate-300">
+              Enterprise backends, Spring, integrations, and robust services.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-800 glass card-tilt">
+            <h3 class="text-xl font-semibold">C++</h3>
+            <p class="mt-2 text-slate-300">
+              High-performance modules, native integrations, and systems work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem → Solution snapshots -->
+    <section id="stories" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">
+            Problem → Solution snapshots
+          </h2>
+          <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
+            Short anonymised caselets you can replace with real stories later.
+          </p>
+        </div>
+        <ol class="timeline space-y-8">
+          <li class="timeline-item" data-aos="fade-up">
+            <h3 class="text-lg font-semibold">SaaS onboarding</h3>
+            <p class="mt-1 text-slate-300">
+              <strong>Problem:</strong> Manual user onboarding slowed growth.
+            </p>
+            <p class="text-slate-300">
+              <strong>Solution:</strong> Self‑serve flows + admin panel, email
+              hooks.
+            </p>
+            <p class="text-slate-400 text-sm">
+              <strong>Outcome:</strong> −XX% time‑to‑onboard (placeholder),
+              fewer support tickets.
+            </p>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-lg font-semibold">Logistics dashboard</h3>
+            <p class="mt-1 text-slate-300">
+              <strong>Problem:</strong> Fragmented data across spreadsheets.
+            </p>
+            <p class="text-slate-300">
+              <strong>Solution:</strong> Unified ETL + KPI dashboard with
+              role‑based access.
+            </p>
+            <p class="text-slate-400 text-sm">
+              <strong>Outcome:</strong> XX hrs/week saved (placeholder), faster
+              decisions.
+            </p>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-lg font-semibold">AI support bot</h3>
+            <p class="mt-1 text-slate-300">
+              <strong>Problem:</strong> Support backlog and slow first response.
+            </p>
+            <p class="text-slate-300">
+              <strong>Solution:</strong> LLM‑powered assistant + human handoff
+              for edge cases.
+            </p>
+            <p class="text-slate-400 text-sm">
+              <strong>Outcome:</strong> −XX% first‑response time (placeholder),
+              higher CSAT.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">Our 4-Step Process</h2>
+          <p class="mt-3 text-slate-300">
+            We reduce risk by keeping communication frequent and scope precise.
+          </p>
+        </div>
+        <div class="stepper">
+          <div class="stepper-line"></div>
+          <ol class="relative grid md:grid-cols-4 gap-8">
+            <li class="step" data-aos="fade-up">
+              <div class="badge">1</div>
+              <h3 class="mt-3 text-lg font-semibold">Discover</h3>
+              <p class="mt-1 text-slate-300">
+                Clarify goals, constraints, and success metrics in a 60–90 min
+                call.
+              </p>
+            </li>
+            <li class="step" data-aos="fade-up" data-aos-delay="100">
+              <div class="badge">2</div>
+              <h3 class="mt-3 text-lg font-semibold">Design</h3>
+              <p class="mt-1 text-slate-300">
+                Lean specs, wireframes, and milestones. You sign off the scope.
+              </p>
+            </li>
+            <li class="step" data-aos="fade-up" data-aos-delay="200">
+              <div class="badge">3</div>
+              <h3 class="mt-3 text-lg font-semibold">Build</h3>
+              <p class="mt-1 text-slate-300">
+                Iterative sprints, weekly demos, and transparent updates.
+              </p>
+            </li>
+            <li class="step" data-aos="fade-up" data-aos-delay="300">
+              <div class="badge">4</div>
+              <h3 class="mt-3 text-lg font-semibold">Launch</h3>
+              <p class="mt-1 text-slate-300">
+                Production deploy, hand-off docs, and a 30-day stabilization
+                window.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantees / Credibility -->
+    <section
+      id="guarantees"
+      class="py-20 bg-slate-900/60 border-y border-slate-800/60"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">Our Guarantees</h2>
+          <p class="mt-3 text-slate-300">
+            We’re a new studio without a portfolio yet—so we over-deliver
+            elsewhere.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <span
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-900/10 border border-emerald-700/40 font-mono text-sm"
+            >
+              <span class="opacity-70">contract</span>
+              <span class="sr-only"
+                >{ fixed: true }, { surprises: 0 }, { warranty: "30 days"
+                }</span
+              >
+              <span
+                class="typing"
+                aria-hidden="true"
+                data-typewriter='["{ fixed: true }","{ surprises: 0 }","{ warranty: \"30 days\" }"]'
+              ></span>
+            </span>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="p-6 rounded-2xl border border-emerald-700/40 bg-emerald-900/10 card-tilt"
+            data-aos="zoom-in"
+          >
+            <h3 class="text-xl font-semibold">Fixed-Scope Contracts</h3>
+            <p class="mt-2 text-slate-300">
+              We commit to a clear scope and price before we start. No
+              surprises.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-2xl border border-cyan-700/40 bg-cyan-900/10 card-tilt"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <h3 class="text-xl font-semibold">NDA & IP Safe</h3>
+            <p class="mt-2 text-slate-300">
+              We sign NDAs on request. You own the code and all deliverables.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-2xl border border-blue-700/40 bg-blue-900/10 card-tilt"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <h3 class="text-xl font-semibold">30-Day Warranty</h3>
+            <p class="mt-2 text-slate-300">
+              Post-launch fixes for scope-covered issues are on us.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Compliance -->
+    <section
+      id="security"
+      class="py-20 bg-slate-900/60 border-y border-slate-800/60"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">
+            Security &amp; Compliance
+          </h2>
+          <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
+            UK‑based team. GDPR‑aligned practices. EU or UK hosting on request.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <details
+            class="group rounded-xl border border-slate-800 p-5 glass"
+            data-aos="fade-up"
+          >
+            <summary
+              class="flex cursor-pointer items-center justify-between text-lg font-medium"
+            >
+              Data protection
+              <span class="transition group-open:rotate-45">＋</span>
+            </summary>
+            <ul class="mt-3 text-slate-300 space-y-2 text-sm">
+              <li>• Data minimisation, encryption in transit & at rest</li>
+              <li>• DPIA on request, sensible retention policies</li>
+              <li>• EU or UK hosting on request</li>
+            </ul>
+          </details>
+          <details
+            class="group rounded-xl border border-slate-800 p-5 glass"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <summary
+              class="flex cursor-pointer items-center justify-between text-lg font-medium"
+            >
+              Access & secrets
+              <span class="transition group-open:rotate-45">＋</span>
+            </summary>
+            <ul class="mt-3 text-slate-300 space-y-2 text-sm">
+              <li>• Least‑privilege access, SSO where applicable</li>
+              <li>• Key rotation and segregated environments</li>
+              <li>• Scoped access for contractors only when needed</li>
+            </ul>
+          </details>
+          <details
+            class="group rounded-xl border border-slate-800 p-5 glass"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <summary
+              class="flex cursor-pointer items-center justify-between text-lg font-medium"
+            >
+              Reliability
+              <span class="transition group-open:rotate-45">＋</span>
+            </summary>
+            <ul class="mt-3 text-slate-300 space-y-2 text-sm">
+              <li>• Automated backups, health checks & logging</li>
+              <li>• Incident response and rollback plans</li>
+              <li>• Change management via PRs and reviews</li>
+            </ul>
+          </details>
+        </div>
+        <p class="mt-6 text-xs text-slate-400 text-center">
+          Note: We align our practices with SOC 2‑style controls but do not
+          claim formal certification.
+        </p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div data-aos="fade-right">
+            <h2 class="text-3xl sm:text-4xl font-bold">
+              About New World Programming
+            </h2>
+            <p class="mt-4 text-slate-300">
+              Founded in 2025, we’re a UK-based, senior-only team focused on
+              shipping well-crafted software fast. We don’t have public case
+              studies yet, so we double down on documentation, automated
+              testing, and proactive communication.
+            </p>
+            <ul class="mt-6 space-y-2 text-slate-300 list-disc list-inside">
+              <li>Weekly demos and progress updates</li>
+              <li>Clean, documented codebases</li>
+              <li>Security-first practices</li>
+            </ul>
+
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+              <div class="p-6 rounded-2xl border border-slate-800 glass">
+                <h3 class="text-xl font-semibold">Business Profile</h3>
+                <ul class="mt-3 text-slate-300 space-y-2 text-sm">
+                  <li>• British-based company</li>
+                  <li>• General Manager: Benjamin Bahrami (MSc, MEng, BEE)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-2xl overflow-hidden border border-slate-800 shadow-soft"
+            data-aos="fade-left"
+          >
+            <img
+              src="assets/images/about.jpg"
+              alt="Our team"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              width="1400"
+              height="933"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section
+      id="team"
+      class="py-20 bg-slate-900/60 border-y border-slate-800/60"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">Meet the Team</h2>
+          <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
+            A senior-only, hands-on crew. We’re a new studio, but each member
+            has shipped real products at startups and agencies.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Member 0 (from client brief) -->
+          <div
+            class="p-6 rounded-2xl border border-slate-800 glass card-tilt"
+            data-aos="fade-up"
+          >
+            <div
+              class="relative h-40 w-40 mx-auto rounded-2xl overflow-hidden border border-slate-700 shadow-soft"
+            >
+              <img
+                src="https://api.dicebear.com/7.x/initials/svg?seed=Benjamin%20Bahrami&backgroundType=gradientLinear&fontFamily=Fira%20Code&fontWeight=700&radius=20&size=240"
+                alt="Benjamin Bahrami"
+                class="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="240"
+                height="240"
+              />
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-center">
+              Benjamin Bahrami
+            </h3>
+            <p class="text-slate-400 text-center">
+              General Manager — MSc, MEng, BEE
+            </p>
+            <ul class="mt-3 text-slate-300 text-sm space-y-1">
+              <li>• Business & technical leadership</li>
+              <li>• Client relations & delivery</li>
+              <li>• Quality & process oversight</li>
+            </ul>
+          </div>
+
+          <!-- Member 1 -->
+          <div
+            class="p-6 rounded-2xl border border-slate-800 glass card-tilt"
+            data-aos="fade-up"
+          >
+            <div
+              class="relative h-40 w-40 mx-auto rounded-2xl overflow-hidden border border-slate-700 shadow-soft"
+            >
+              <img
+                src="https://api.dicebear.com/7.x/initials/svg?seed=Ava%20Morgan&backgroundType=gradientLinear&fontFamily=Fira%20Code&fontWeight=700&radius=20&size=240"
+                alt="Ava Morgan"
+                class="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="240"
+                height="240"
+              />
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-center">Ava Morgan</h3>
+            <p class="text-slate-400 text-center">Product Lead</p>
+            <ul class="mt-3 text-slate-300 text-sm space-y-1">
+              <li>• Discovery, scoping, and roadmapping</li>
+              <li>• UX copy & stakeholder comms</li>
+              <li>• Keeps schedules sane</li>
+            </ul>
+            <div class="mt-4 flex justify-center gap-4 text-sm text-slate-400">
+              <a href="#" class="underline">LinkedIn</a>
+            </div>
+          </div>
+          <!-- Member 2 -->
+          <div
+            class="p-6 rounded-2xl border border-slate-800 glass card-tilt"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="relative h-40 w-40 mx-auto rounded-2xl overflow-hidden border border-slate-700 shadow-soft"
+            >
+              <img
+                src="https://api.dicebear.com/7.x/initials/svg?seed=Liam%20Chen&backgroundType=gradientLinear&fontFamily=Fira%20Code&fontWeight=700&radius=20&size=240"
+                alt="Liam Chen"
+                class="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="240"
+                height="240"
+              />
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-center">Liam Chen</h3>
+            <p class="text-slate-400 text-center">CTO • Backend</p>
+            <ul class="mt-3 text-slate-300 text-sm space-y-1">
+              <li>• Node.js / .NET, Go</li>
+              <li>• SQL & distributed systems</li>
+              <li>• Code quality & architecture</li>
+            </ul>
+            <div class="mt-4 flex justify-center gap-4 text-sm text-slate-400">
+              <a href="#" class="underline">LinkedIn</a>
+              <a href="#" class="underline">GitHub</a>
+            </div>
+          </div>
+          <!-- Member 3 -->
+          <div
+            class="p-6 rounded-2xl border border-slate-800 glass card-tilt"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="relative h-40 w-40 mx-auto rounded-2xl overflow-hidden border border-slate-700 shadow-soft"
+            >
+              <img
+                src="https://api.dicebear.com/7.x/initials/svg?seed=Sara%20Patel&backgroundType=gradientLinear&fontFamily=Fira%20Code&fontWeight=700&radius=20&size=240"
+                alt="Sara Patel"
+                class="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="240"
+                height="240"
+              />
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-center">Sara Patel</h3>
+            <p class="text-slate-400 text-center">Frontend & UX</p>
+            <ul class="mt-3 text-slate-300 text-sm space-y-1">
+              <li>• React / Vue, Tailwind</li>
+              <li>• Design systems & accessibility</li>
+              <li>• Pixel-perfect, responsive UI</li>
+            </ul>
+            <div class="mt-4 flex justify-center gap-4 text-sm text-slate-400">
+              <a href="#" class="underline">LinkedIn</a>
+              <a href="#" class="underline">Dribbble</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">
+            Frequently Asked Questions
+          </h2>
+          <p class="mt-3 text-slate-300">
+            Straight answers for common concerns.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <details
+            class="group rounded-xl border border-slate-800 p-5 glass"
+            data-aos="fade-up"
+          >
+            <summary
+              class="flex cursor-pointer items-center justify-between text-lg font-medium"
+            >
+              You don’t have a portfolio—how can I trust you?
+              <span class="transition group-open:rotate-45">＋</span>
+            </summary>
+            <p class="mt-3 text-slate-300">
+              We’re new as a company, but not new to building software. We
+              mitigate risk with fixed scopes, weekly demos, and a 30-day
+              warranty. We’re also happy to start with a small paid pilot to
+              prove fit.
+            </p>
+          </details>
+          <details
+            class="group rounded-xl border border-slate-800 p-5 glass"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <summary
+              class="flex cursor-pointer items-center justify-between text-lg font-medium"
+            >
+              How do pricing and timelines work?
+              <span class="transition group-open:rotate-45">＋</span>
+            </summary>
+            <p class="mt-3 text-slate-300">
+              After a discovery call we send a fixed-scope proposal with
+              milestones. Typical MVPs ship in 4–6 weeks depending on
+              complexity.
+            </p>
+          </details>
+          <details
+            class="group rounded-xl border border-slate-800 p-5 glass"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <summary
+              class="flex cursor-pointer items-center justify-between text-lg font-medium"
+            >
+              Do you work under NDA?
+              <span class="transition group-open:rotate-45">＋</span>
+            </summary>
+            <p class="mt-3 text-slate-300">
+              Yes. We can sign your NDA or provide ours. All IP belongs to you
+              on payment.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Communication & Handoff + Next Steps -->
+    <section id="handoff" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div data-aos="fade-right">
+            <h2 class="text-3xl sm:text-4xl font-bold">
+              Communication &amp; handoff
+            </h2>
+            <ul class="mt-4 space-y-2 text-slate-300">
+              <li>• Email‑first, scheduled calls as needed (UK timezone).</li>
+              <li>
+                • Weekly demo & status summary—clear milestones, no surprises.
+              </li>
+              <li>
+                • Single point of contact; response time &lt; 1 business day.
+              </li>
+              <li>
+                • Handover: source repo, README, runbook, env & infra notes.
+              </li>
+              <li>• 30‑day post‑launch warranty for in‑scope issues.</li>
+            </ul>
+          </div>
+          <div
+            data-aos="fade-left"
+            class="p-6 rounded-2xl border border-slate-800 glass"
+          >
+            <h3 class="text-xl font-semibold">Next steps</h3>
+            <ol class="mt-3 space-y-2 list-decimal list-inside text-slate-300">
+              <li>Send the form with a brief.</li>
+              <li>30‑minute discovery call.</li>
+              <li>Fixed scope & quote in writing.</li>
+              <li>Kickoff—first demo in ~1 week.</li>
+            </ol>
+            <a
+              href="#contact"
+              class="mt-6 inline-block px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-soft"
+              >Get a Quote</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="py-20 bg-slate-900/60 border-y border-slate-800/60"
+    >
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl sm:text-4xl font-bold">
+            Book a Free Discovery Call
+          </h2>
+          <p class="mt-3 text-slate-300">
+            Tell us about your idea and we’ll reply within 24 hours.
+          </p>
+        </div>
+        <form
+          class="grid md:grid-cols-2 gap-4"
+          action="#"
+          method="post"
+          novalidate
+        >
+          <label class="sr-only" for="name">Your name</label>
+          <input
+            id="name"
+            class="w-full rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+          <label class="sr-only" for="email">Email</label>
+          <input
+            id="email"
+            class="w-full rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+          <label class="sr-only" for="company">Company</label>
+          <input
+            id="company"
+            class="w-full md:col-span-2 rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            name="company"
+            placeholder="Company (optional)"
+          />
+          <label class="sr-only" for="message">Message</label>
+          <textarea
+            id="message"
+            class="w-full md:col-span-2 rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            name="message"
+            rows="5"
+            placeholder="Briefly describe your project and timeline"
+          ></textarea>
+          <button
+            class="mt-2 md:col-span-2 px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-soft"
+          >
+            Send
+          </button>
+        </form>
+        <p class="text-center text-slate-400 text-sm mt-4">
+          Prefer email? <a href="#" class="underline">Add your email here</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+        >
+          <p class="text-slate-400">
+            © <span id="year"></span> New World Programming. All rights
+            reserved. · United Kingdom
+          </p>
+          <div class="flex items-center gap-4 text-slate-400">
+            <a href="#" class="hover:text-slate-200">GitHub</a>
+            <a href="#" class="hover:text-slate-200">LinkedIn</a>
+            <a href="#" class="hover:text-slate-200">X</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button
+      id="toTop"
+      class="fixed bottom-5 right-5 hidden px-3 py-2 rounded-full bg-white/10 border border-white/20"
+    >
+      ▲
+    </button>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "New World Programming",
+        "url": "https://nwprogramming.com",
+        "logo": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=400&auto=format&fit=crop",
+        "sameAs": [
+          "https://github.com/newworldprogramming",
+          "https://www.linkedin.com/company/newworldprogramming"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "You don’t have a portfolio—how can I trust you?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We mitigate risk with fixed scopes, weekly demos, and a 30-day warranty. We can also start with a small paid pilot to prove fit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do pricing and timelines work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "After a discovery call we send a fixed-scope proposal with milestones. Typical MVPs ship in 4–6 weeks depending on complexity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work under NDA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We can sign your NDA or provide ours. All IP belongs to you on payment."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Scripts -->
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/typewriter.js"></script>
+    <script defer src="assets/js/hero-canvas.js"></script>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="md:hidden fixed inset-x-0 bottom-0 z-40">
+      <div class="mx-auto max-w-7xl px-4 py-3">
+        <a
+          href="#contact"
+          class="block text-center rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 py-3 shadow-soft"
+          >Get a Quote</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
