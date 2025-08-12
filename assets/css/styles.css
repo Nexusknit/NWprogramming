@@ -230,3 +230,15 @@ section {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* --- Mobile polish --- */
+/* Scroll hint a bit higher on small screens so it won't sit under sticky CTA */
+@media (max-width: 768px) {
+  .scroll-hint {
+    bottom: 4.5rem;
+  }
+}
+/* iOS safe-area padding for sticky CTA container */
+.mobile-sticky {
+  padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
+}

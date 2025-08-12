@@ -73,6 +73,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+    <!-- External Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="bg-slate-950 text-slate-100 antialiased">
@@ -146,7 +147,7 @@
     <!-- Hero Slider -->
     <section id="home" class="relative pt-16">
       <canvas id="heroCanvas" class="hero-canvas"></canvas>
-      <div class="swiper hero-swiper h-[85vh]">
+      <div class="swiper hero-swiper min-h-[82svh] md:h-[85vh]">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide relative">
@@ -570,9 +571,9 @@
                 >🛡️</span
               >
               <div>
-                <h3 class="text-lg font-semibold">30‑day warranty</h3>
+                <h3 class="text-lg font-semibold">30-day warranty</h3>
                 <p class="mt-1 text-slate-300">
-                  If something in scope isn’t right post‑launch, we fix it at
+                  If something in scope isn’t right post-launch, we fix it at
                   our cost within 30 days.
                 </p>
               </div>
@@ -667,11 +668,11 @@
               <strong>Problem:</strong> Manual user onboarding slowed growth.
             </p>
             <p class="text-slate-300">
-              <strong>Solution:</strong> Self‑serve flows + admin panel, email
+              <strong>Solution:</strong> Self-serve flows + admin panel, email
               hooks.
             </p>
             <p class="text-slate-400 text-sm">
-              <strong>Outcome:</strong> −XX% time‑to‑onboard (placeholder),
+              <strong>Outcome:</strong> −XX% time-to-onboard (placeholder),
               fewer support tickets.
             </p>
           </li>
@@ -682,7 +683,7 @@
             </p>
             <p class="text-slate-300">
               <strong>Solution:</strong> Unified ETL + KPI dashboard with
-              role‑based access.
+              role-based access.
             </p>
             <p class="text-slate-400 text-sm">
               <strong>Outcome:</strong> XX hrs/week saved (placeholder), faster
@@ -695,11 +696,11 @@
               <strong>Problem:</strong> Support backlog and slow first response.
             </p>
             <p class="text-slate-300">
-              <strong>Solution:</strong> LLM‑powered assistant + human handoff
+              <strong>Solution:</strong> LLM-powered assistant + human handoff
               for edge cases.
             </p>
             <p class="text-slate-400 text-sm">
-              <strong>Outcome:</strong> −XX% first‑response time (placeholder),
+              <strong>Outcome:</strong> −XX% first-response time (placeholder),
               higher CSAT.
             </p>
           </li>
@@ -829,7 +830,7 @@
             Security &amp; Compliance
           </h2>
           <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
-            UK‑based team. GDPR‑aligned practices. EU or UK hosting on request.
+            UK-based team. GDPR-aligned practices. EU or UK hosting on request.
           </p>
         </div>
         <div class="space-y-4">
@@ -861,7 +862,7 @@
               <span class="transition group-open:rotate-45">＋</span>
             </summary>
             <ul class="mt-3 text-slate-300 space-y-2 text-sm">
-              <li>• Least‑privilege access, SSO where applicable</li>
+              <li>• Least-privilege access, SSO where applicable</li>
               <li>• Key rotation and segregated environments</li>
               <li>• Scoped access for contractors only when needed</li>
             </ul>
@@ -885,7 +886,7 @@
           </details>
         </div>
         <p class="mt-6 text-xs text-slate-400 text-center">
-          Note: We align our practices with SOC 2‑style controls but do not
+          Note: We align our practices with SOC 2-style controls but do not
           claim formal certification.
         </p>
       </div>
@@ -1154,7 +1155,7 @@
               Communication &amp; handoff
             </h2>
             <ul class="mt-4 space-y-2 text-slate-300">
-              <li>• Email‑first, scheduled calls as needed (UK timezone).</li>
+              <li>• Email-first, scheduled calls as needed (UK timezone).</li>
               <li>
                 • Weekly demo & status summary—clear milestones, no surprises.
               </li>
@@ -1164,7 +1165,7 @@
               <li>
                 • Handover: source repo, README, runbook, env & infra notes.
               </li>
-              <li>• 30‑day post‑launch warranty for in‑scope issues.</li>
+              <li>• 30-day post-launch warranty for in-scope issues.</li>
             </ul>
           </div>
           <div
@@ -1174,7 +1175,7 @@
             <h3 class="text-xl font-semibold">Next steps</h3>
             <ol class="mt-3 space-y-2 list-decimal list-inside text-slate-300">
               <li>Send the form with a brief.</li>
-              <li>30‑minute discovery call.</li>
+              <li>30-minute discovery call.</li>
               <li>Fixed scope & quote in writing.</li>
               <li>Kickoff—first demo in ~1 week.</li>
             </ol>
@@ -1326,14 +1327,14 @@
       }
     </script>
 
-    <!-- Scripts -->
+    <!-- External Scripts -->
     <script defer src="assets/js/main.js"></script>
     <script defer src="assets/js/typewriter.js"></script>
     <script defer src="assets/js/hero-canvas.js"></script>
 
     <!-- Mobile Sticky CTA -->
     <div class="md:hidden fixed inset-x-0 bottom-0 z-40">
-      <div class="mx-auto max-w-7xl px-4 py-3">
+      <div class="mx-auto max-w-7xl px-4 py-3 mobile-sticky">
         <a
           href="#contact"
           class="block text-center rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 py-3 shadow-soft"
