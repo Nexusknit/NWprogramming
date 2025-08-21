@@ -40,7 +40,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const heroSwiper = new Swiper(".hero-swiper", {
       loop: true,
       speed: 800,
-      autoplay: reduceMotion ? false : { delay: 5000 },
+      autoplay: reduceMotion
+        ? false
+        : { delay: 5000, disableOnInteraction: false },
       effect: reduceMotion ? "slide" : "fade",
       fadeEffect: { crossFade: true },
       pagination: { el: ".swiper-pagination", clickable: true },
@@ -50,23 +52,44 @@ window.addEventListener("DOMContentLoaded", () => {
       },
       on: {
         init(sw) {
-          const all = document.querySelectorAll(".hero-text");
-          all.forEach((el) => el.classList.remove("show"));
+          // Hide all captions initially, then reveal only the active one after first paint
+          document
+            .querySelectorAll(".hero-text")
+            .forEach((el) => el.classList.remove("show"));
           const active = document.querySelector(
             ".hero-swiper .swiper-slide-active .hero-text"
           );
-          if (active) setTimeout(() => active.classList.add("show"), 600);
+          if (active) setTimeout(() => active.classList.add("show"), 120);
+        },
+        slideChangeTransitionStart(sw) {
+          // Always hide captions at the start of a transition (manual or autoplay)
+          document
+            .querySelectorAll(".hero-text")
+            .forEach((el) => el.classList.remove("show"));
+        },
+        slideChangeTransitionEnd(sw) {
+          // Reveal caption only after the image transition has finished
+          const active = document.querySelector(
+            ".hero-swiper .swiper-slide-active .hero-text"
+          );
+          if (active) active.classList.add("show");
         },
       },
     });
-    heroSwiper.on("slideChangeTransitionStart", () => {
-      const all = document.querySelectorAll(".hero-text");
-      all.forEach((el) => el.classList.remove("show"));
-      const active = document.querySelector(
-        ".hero-swiper .swiper-slide-active .hero-text"
-      );
-      if (active) setTimeout(() => active.classList.add("show"), 400);
-    });
+
+    // Ensure autoplay resumes after user clicks nav arrows (safety in addition to disableOnInteraction:false)
+    const nextBtn = document.querySelector(".swiper-button-next");
+    const prevBtn = document.querySelector(".swiper-button-prev");
+    [nextBtn, prevBtn].forEach((btn) =>
+      btn?.addEventListener("click", () => {
+        if (
+          heroSwiper?.autoplay &&
+          typeof heroSwiper.autoplay.start === "function"
+        ) {
+          heroSwiper.autoplay.start();
+        }
+      })
+    );
   }
   if (window.AOS) {
     AOS.init({
