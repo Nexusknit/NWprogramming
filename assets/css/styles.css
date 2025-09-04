@@ -277,7 +277,4 @@ section {
   z-index: 30;
 }
 
-/* Remove default disclosure marker from details summary (for custom caret) */
-summary::-webkit-details-marker {
-  display: none;
-}
+/* (Removed details summary marker override as dropdowns were reverted) */
