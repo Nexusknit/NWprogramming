@@ -2,6 +2,9 @@
 const reduceMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
+// Unified caption delay after image transition
+const CAPTION_DELAY = reduceMotion ? 0 : 300; // ms
+let heroCaptionTimer;
 
 // Mobile menu toggle
 const mobileBtn = document.getElementById("mobileMenuBtn");
@@ -59,10 +62,16 @@ window.addEventListener("DOMContentLoaded", () => {
           const active = document.querySelector(
             ".hero-swiper .swiper-slide-active .hero-text"
           );
-          if (active) setTimeout(() => active.classList.add("show"), 120);
+          if (heroCaptionTimer) clearTimeout(heroCaptionTimer);
+          if (active)
+            heroCaptionTimer = setTimeout(
+              () => active.classList.add("show"),
+              CAPTION_DELAY
+            );
         },
         slideChangeTransitionStart(sw) {
           // Always hide captions at the start of a transition (manual or autoplay)
+          if (heroCaptionTimer) clearTimeout(heroCaptionTimer);
           document
             .querySelectorAll(".hero-text")
             .forEach((el) => el.classList.remove("show"));
@@ -72,7 +81,12 @@ window.addEventListener("DOMContentLoaded", () => {
           const active = document.querySelector(
             ".hero-swiper .swiper-slide-active .hero-text"
           );
-          if (active) active.classList.add("show");
+          if (heroCaptionTimer) clearTimeout(heroCaptionTimer);
+          if (active)
+            heroCaptionTimer = setTimeout(
+              () => active.classList.add("show"),
+              CAPTION_DELAY
+            );
         },
       },
     });
