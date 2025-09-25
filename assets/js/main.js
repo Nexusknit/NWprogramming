@@ -24,6 +24,41 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// Desktop "More" menu
+document.querySelectorAll("[data-menu-root]").forEach((root) => {
+  const button = root.querySelector("[data-menu-button]");
+  const panel = root.querySelector("[data-menu-panel]");
+  if (!button || !panel) return;
+
+  const closeMenu = () => {
+    if (panel.classList.contains("hidden")) return;
+    panel.classList.add("hidden");
+    button.setAttribute("aria-expanded", "false");
+  };
+
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isHidden = panel.classList.toggle("hidden");
+    const isOpen = !isHidden;
+    button.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  root.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+      button.focus();
+    }
+  });
+
+  root.addEventListener("focusout", (event) => {
+    if (!root.contains(event.relatedTarget)) closeMenu();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!root.contains(event.target)) closeMenu();
+  });
+});
+
 // Back to top
 const toTop = document.getElementById("toTop");
 window.addEventListener("scroll", () => {

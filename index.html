@@ -79,31 +79,73 @@
   <body class="bg-slate-950 text-slate-100 antialiased">
     <!-- Header -->
     <header
-      class="fixed inset-x-0 top-0 z-50 bg-slate-950/70 border-b border-slate-800/60 glass"
+      class="fixed inset-x-0 top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800/60"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
+        <div class="flex items-center justify-between gap-4 h-16">
           <a href="#home" class="flex items-center gap-2 group">
             <span class="inline-flex h-8 w-8 rounded-xl brand-gradient"></span>
             <span class="font-semibold tracking-tight"
               >New World Programming</span
             >
           </a>
-          <nav class="hidden md:flex items-center gap-6 text-sm">
-            <a href="#services" class="animated-underline">Services</a>
-            <a href="#why-us" class="animated-underline">Why us</a>
-            <a href="#expertise" class="animated-underline">Expertise</a>
-            <a href="#stories" class="animated-underline">Stories</a>
-            <a href="#process" class="animated-underline">Process</a>
-            <a href="#guarantees" class="animated-underline">Guarantees</a>
-            <a href="#security" class="animated-underline">Security</a>
-            <a href="#about" class="animated-underline">About</a>
-            <a href="#team" class="animated-underline">Team</a>
-            <a href="#faq" class="animated-underline">FAQ</a>
-            <a href="#handoff" class="animated-underline">Next steps</a>
+          <nav class="hidden md:flex items-center gap-8 text-sm">
+            <ul class="flex items-center gap-6 text-slate-200">
+              <li>
+                <a href="#services" class="animated-underline">Services</a>
+              </li>
+              <li>
+                <a href="#expertise" class="animated-underline">Expertise</a>
+              </li>
+              <li>
+                <a href="#deep-dives" class="animated-underline">Deep dives</a>
+              </li>
+              <li>
+                <a href="#process" class="animated-underline">Process</a>
+              </li>
+              <li>
+                <a href="#stories" class="animated-underline">Stories</a>
+              </li>
+              <li>
+                <a href="#about" class="animated-underline">About</a>
+              </li>
+              <li class="relative" data-menu-root>
+                <button
+                  type="button"
+                  class="inline-flex items-center gap-1 text-slate-300 hover:text-slate-100 transition-colors"
+                  data-menu-button
+                  aria-expanded="false"
+                >
+                  More
+                  <svg
+                    class="h-3.5 w-3.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 6l4 4 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div class="header-menu hidden" data-menu-panel>
+                  <a href="#why-us" class="header-menu__item">Why us</a>
+                  <a href="#guarantees" class="header-menu__item">Guarantees</a>
+                  <a href="#security" class="header-menu__item">Security</a>
+                  <a href="#team" class="header-menu__item">Team</a>
+                  <a href="#faq" class="header-menu__item">FAQ</a>
+                  <a href="#handoff" class="header-menu__item">Next steps</a>
+                </div>
+              </li>
+            </ul>
+            <div class="h-5 w-px bg-white/10"></div>
             <a
               href="#contact"
-              class="px-3 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-soft"
+              class="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-soft"
               >Get a Quote</a
             >
           </nav>
@@ -114,32 +156,59 @@
             aria-expanded="false"
             aria-controls="mobileMenu"
           >
-            ☰
+            <span class="sr-only">Toggle navigation</span>
+            <svg
+              class="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
           </button>
         </div>
       </div>
       <!-- Mobile menu -->
       <div
         id="mobileMenu"
-        class="md:hidden hidden border-t border-slate-800/60"
+        class="md:hidden hidden border-t border-slate-800/60 bg-slate-950/95 backdrop-blur"
       >
-        <div class="px-4 py-3 space-y-2 bg-slate-900/80">
-          <a href="#services" class="block">Services</a>
-          <a href="#why-us" class="block">Why us</a>
-          <a href="#expertise" class="block">Expertise</a>
-          <a href="#stories" class="block">Stories</a>
-          <a href="#process" class="block">Process</a>
-          <a href="#guarantees" class="block">Guarantees</a>
-          <a href="#security" class="block">Security</a>
-          <a href="#handoff" class="block">Next steps</a>
-          <a href="#about" class="block">About</a>
-          <a href="#team" class="block">Team</a>
-          <a href="#faq" class="block">FAQ</a>
-          <a
-            href="#contact"
-            class="block px-3 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500"
-            >Get a Quote</a
-          >
+        <div class="px-4 py-4 space-y-6">
+          <div>
+            <p class="text-xs uppercase tracking-wide text-slate-400">
+              Navigate
+            </p>
+            <div class="mt-3 grid gap-2 text-sm">
+              <a href="#services" class="block py-1">Services</a>
+              <a href="#expertise" class="block py-1">Expertise</a>
+              <a href="#deep-dives" class="block py-1">Deep dives</a>
+              <a href="#process" class="block py-1">Process</a>
+              <a href="#stories" class="block py-1">Stories</a>
+              <a href="#about" class="block py-1">About</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-wide text-slate-400">More</p>
+            <div class="mt-3 grid gap-2 text-sm">
+              <a href="#why-us" class="block py-1">Why us</a>
+              <a href="#guarantees" class="block py-1">Guarantees</a>
+              <a href="#security" class="block py-1">Security</a>
+              <a href="#team" class="block py-1">Team</a>
+              <a href="#faq" class="block py-1">FAQ</a>
+              <a href="#handoff" class="block py-1">Next steps</a>
+            </div>
+          </div>
+          <div class="border-t border-slate-800/60 pt-4">
+            <a
+              href="#contact"
+              class="block text-center px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-soft"
+              >Get a Quote</a
+            >
+          </div>
         </div>
       </div>
     </header>
@@ -639,6 +708,187 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Deep Dives -->
+    <section id="deep-dives" class="py-20">
+      <div class="max-w-7xl mx-auto px-6 space-y-16">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold">Deep dives</h2>
+          <p class="mt-3 text-slate-300">
+            Two spotlight capabilities with space for rich media you can swap in
+            later.
+          </p>
+        </div>
+
+        <article
+          class="grid md:grid-cols-2 gap-10 items-center"
+          data-aos="fade-up"
+        >
+          <div
+            class="relative deep-dive-media overflow-hidden rounded-3xl border border-slate-800 glass shadow-soft"
+          >
+            <img
+              src="./assets/images/RAG.jpeg"
+              alt="Large Language Models concept illustration"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <span
+              class="inline-flex items-center gap-2 text-sm uppercase tracking-wide text-sky-400"
+            >
+              🔹 Introduction
+            </span>
+            <h3 class="mt-2 text-2xl sm:text-3xl font-semibold">
+              Large Language Models (LLM)
+            </h3>
+            <p class="mt-4 text-slate-300">
+              Large Language Models (LLMs) are trained on massive text corpora
+              so they can understand, generate, and analyse human language.
+              Teams rely on models such as GPT and LLaMA for conversational
+              agents, content generation, translation, and summarisation tasks.
+            </p>
+            <div class="mt-6">
+              <h4 class="text-lg font-semibold text-slate-200">
+                Trending projects
+              </h4>
+              <ul class="mt-3 space-y-4 text-slate-300">
+                <li>
+                  <p class="font-semibold text-slate-100">
+                    RAG (Retrieval-Augmented Generation)
+                  </p>
+                  <p class="mt-1">
+                    Blend language models with search indices or knowledge bases
+                    to deliver grounded, up-to-date answers.
+                  </p>
+                  <p class="mt-1 text-sm text-slate-400">
+                    Applications: Enterprise chatbots, question-answering
+                    systems, knowledge-based assistants.
+                  </p>
+                </li>
+                <li>
+                  <p class="font-semibold text-slate-100">ChatGPT Plugins</p>
+                  <p class="mt-1">
+                    Extend chat interfaces with API connections so agents can
+                    trigger real-world workflows.
+                  </p>
+                  <p class="mt-1 text-sm text-slate-400">
+                    Applications: Online shopping, ticket booking, live data
+                    analysis.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <h4 class="text-lg font-semibold text-slate-200">
+                Introductory video
+              </h4>
+              <div
+                class="mt-3 relative deep-dive-media overflow-hidden rounded-2xl border border-slate-800"
+              >
+                <iframe
+                  class="absolute inset-0 h-full w-full rounded-2xl"
+                  src="https://www.youtube.com/embed/gweRh5Xtkq0?si=ehGlna0bWtYeD32T"
+                  title="Large Language Models overview"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="mt-2 text-sm text-slate-400">
+                Replace the video URL once you decide on the final intro clip.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="grid md:grid-cols-2 gap-10 items-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div
+            class="relative deep-dive-media overflow-hidden rounded-3xl border border-slate-800 glass shadow-soft md:order-2"
+          >
+            <img
+              src="./assets/images/computer_vision.jpeg"
+              alt="Computer Vision concept illustration"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="md:order-1">
+            <span
+              class="inline-flex items-center gap-2 text-sm uppercase tracking-wide text-sky-400"
+            >
+              🔹 Introduction
+            </span>
+            <h3 class="mt-2 text-2xl sm:text-3xl font-semibold">
+              Computer Vision
+            </h3>
+            <p class="mt-4 text-slate-300">
+              Computer Vision enables software to interpret imagery the way
+              people do. It powers facial recognition, autonomous vehicles,
+              advanced security tooling, and clinical diagnostics by combining
+              deep learning with image processing.
+            </p>
+            <div class="mt-6">
+              <h4 class="text-lg font-semibold text-slate-200">
+                Trending projects
+              </h4>
+              <ul class="mt-3 space-y-4 text-slate-300">
+                <li>
+                  <p class="font-semibold text-slate-100">
+                    Real-time Object Detection with YOLOv8
+                  </p>
+                  <p class="mt-1">
+                    Deploy lightning-fast detectors that track multiple objects
+                    in live video feeds.
+                  </p>
+                  <p class="mt-1 text-sm text-slate-400">
+                    Applications: Security cameras, autonomous vehicles, crowd
+                    monitoring systems.
+                  </p>
+                </li>
+                <li>
+                  <p class="font-semibold text-slate-100">
+                    Medical Image Analysis
+                  </p>
+                  <p class="mt-1">
+                    Use specialised CNNs and transformers to flag anomalies in
+                    X-ray, MRI, or CT scans.
+                  </p>
+                  <p class="mt-1 text-sm text-slate-400">
+                    Applications: Cancer detection, lung disease diagnosis,
+                    digital dentistry.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <h4 class="text-lg font-semibold text-slate-200">
+                Introductory video
+              </h4>
+              <div
+                class="mt-3 relative deep-dive-media overflow-hidden rounded-2xl border border-slate-800"
+              >
+                <iframe
+                  class="absolute inset-0 h-full w-full rounded-2xl"
+                  src="https://www.youtube.com/embed/Z-65nqxUdl4?si=opydSzK_aIq_uAwg"
+                  title="Computer Vision overview"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="mt-2 text-sm text-slate-400">
+                Swap the URL for your preferred Computer Vision explainer or
+                tutorial.
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
