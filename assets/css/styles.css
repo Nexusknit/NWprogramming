@@ -318,3 +318,18 @@ section {
 }
 
 /* (Removed details summary marker override as dropdowns were reverted) */
+
+/* Contact section heading icons */
+.contact-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.contact-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  color: rgba(94, 234, 212, 0.85);
+}
+.contact-label {
+  display: inline-block;
+}
